@@ -22,7 +22,7 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Madrid
-          plugin_gists: yes
+          plugin_gists: no
           plugin_habits: yes
           plugin_habits_charts_type: graph
           plugin_habits_days: 14
