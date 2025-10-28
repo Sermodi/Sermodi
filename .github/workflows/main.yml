@@ -12,17 +12,15 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.33
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # Usuario y configuración general
           user: Sermodi
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Madrid
 
-          # Plugins activados
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
@@ -31,4 +29,3 @@ jobs:
           plugin_habits_days: 14
           plugin_habits_charts: yes
           plugin_habits_charts_type: graph
-
