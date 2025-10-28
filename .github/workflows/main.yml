@@ -1,15 +1,13 @@
 name: Metrics
 on:
-  # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
   push: {branches: ["master", "main"]}
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    environment: 
+    environment:
       name: production
     permissions:
       contents: write
@@ -17,16 +15,20 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-                    # Options
+
+          # Usuario y configuración general
           user: Sermodi
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Madrid
-          plugin_gists: no
-          plugin_habits: yes
-          plugin_habits_charts_type: graph
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_from: 200
+
+          # Plugins activados
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_days: 14
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: graph
+
