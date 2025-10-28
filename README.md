@@ -8,9 +8,6 @@
 ![Unity](https://img.shields.io/badge/Unity-000000?style=flat&logo=unity&logoColor=white)
 ![Blender](https://img.shields.io/badge/Blender-F5792A?style=flat&logo=blender&logoColor=white)
 
-##
-![Metrics](/github-metrics.svg)
-
 ## Proyectos destacados
 
 ### [HowLongToBeat_scraper](https://github.com/Sermodi/HowLongToBeat_scraper)
@@ -20,3 +17,6 @@ Permite extraer información de forma automática y analizar el tiempo promedio 
 **Tecnologías usadas:** Python, BeautifulSoup, Requests, Pandas  
 **Estado:** Activo / en mantenimiento  
 **Objetivo:** Facilitar a jugadores y desarrolladores el acceso rápido a estadísticas de duración de videojuegos.  
+
+##
+![Metrics](/github-metrics.svg)
